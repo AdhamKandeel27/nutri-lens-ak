@@ -1,9 +1,12 @@
-import React from 'react'
+import React from "react";
+import PhotoInput from "../components/photoInput/PhotoInput";
 
 const LogMeals = () => {
   return (
-    <div>LogMeals</div>
-  )
-}
+    <div className="log-meals-wrapper">
+      <PhotoInput />
+    </div>
+  );
+};
 
-export default LogMeals
+export default LogMeals;

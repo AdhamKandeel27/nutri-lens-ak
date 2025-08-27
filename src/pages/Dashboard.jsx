@@ -1,9 +1,18 @@
-import React from 'react'
+import React from "react";
+import { supabase } from "../../lib/supabaseClient";
+
 
 const Dashboard = () => {
-  return (
-    <div>Dashboard</div>
-  )
-}
 
-export default Dashboard
+  const handleSignOut = async () =>{
+    await supabase.auth.signOut();
+  }
+  return (
+    <>
+      <div>Dashboard</div>
+      <button onClick={handleSignOut}>Sign Out</button>{" "}
+    </>
+  );
+};
+
+export default Dashboard;

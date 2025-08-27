@@ -11,7 +11,7 @@ const LoginPage = () => {
     e.preventDefault();
     setIsLoading(true);
     const email = e.currentTarget.email.value.trim().toLowerCase();
-    const password = e.currentTarget.password.value.trim().toLowerCase();
+    const password = e.currentTarget.password.value.trim();
     try {
       const { data, error } = await supabase.auth.signInWithPassword({
         email: email,
@@ -19,12 +19,10 @@ const LoginPage = () => {
       });
       if (error) {
         //handles supabase errors
-        console.log(error.message);
         setErrorMessage(error.message);
         return;
       }
-      console.log("Logged in");
-      navigate("dashboard");
+      navigate("../dashboard");
     } catch (err) {
       //handles enexpected JS errors
       setErrorMessage(err.message);

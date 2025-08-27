@@ -7,6 +7,7 @@
 body {
   font-family: "Poppins", sans-serif;
   min-height: 100vh;
+  background-color: darkslategrey;
 }
 
 .login-page-wrapper {
@@ -69,4 +70,11 @@ body {
   margin-top: 1rem;
   color: red;
   font-size: 0.8rem;
+}
+
+.log-meals-wrapper {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
